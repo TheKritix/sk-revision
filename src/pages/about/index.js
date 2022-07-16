@@ -1,20 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/Link'
+import styles from '../../styles/Home.module.css'
 
-const Home = () => {
+const About = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>SK-Revision</title>
+        <title>Om SK-Revision</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <Link href="/about">next page!</Link>
+          Welcome to SK-Revision!
         </h1>
+
+
       </main>
 
       <footer className={styles.footer}>
@@ -33,4 +34,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default About;
