@@ -1,4 +1,5 @@
 import Header from "./header/header.js";
+import Footer from './footer/footer.js'
 
 const About = () => {
   return (
@@ -6,6 +7,7 @@ const About = () => {
       <Header />
       <h1>About</h1>
       <p>This is the about page</p>
+      <Footer />
     </div>
   );
 };
