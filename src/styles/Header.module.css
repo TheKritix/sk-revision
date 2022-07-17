@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 62vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 200px;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.3rem;
+}
+
+.linkbutton {
+    width: 160px;
+    text-align: center;
+    color: #262e42;
+}
+
+.linkbutton:hover {
+    color: #262e42cc;
+}

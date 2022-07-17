@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  flex: 0 1 auto;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(38, 46, 66, 0.678);
+  justify-content: space-between;
+  align-items: center;
+  width: 62vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer a {
+  display: flex;
+}
+
+.image {
+  display: flex;
+  width: 120px;
+  height: 52.5px;
+  margin-right: 3.5rem;
+}
+
+.address {
+  display: flex;
+  width: 11rem;
+  font-family: 'Noto Serif', serif;
+  color: rgba(38, 46, 66, 0.678);
+}
+
+.cvr {
+  display: flex;
+  font-family: 'Noto Serif', serif;
+  color: rgba(38, 46, 66, 0.678);
+}
