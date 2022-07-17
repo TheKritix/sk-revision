@@ -3,30 +3,37 @@ import Header from "../components/header/header.js";
 import Footer from "../components/footer/footer.js";
 import Transition from "../components/page-ani";
 import Router from "next/router";
+import { useEffect } from 'react';
 
-const variants = {
-  hidden: { opacity: 0, x: -200, y: 0 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: 0, y: -100 },
-};
+//Attempt at fixing react-motion bug
+export const OPACITY_EXIT_DURATION = 1;
 
 const routeChange = () => {
-  // Temporary fix to avoid flash of unstyled content
-  // during route transitions. Keep an eye on this
-  // issue and remove this code when resolved:
-  // https://github.com/vercel/next.js/issues/17464
-
-  const tempFix = () => {
-    const allStyleElems = document.querySelectorAll('style[media="x"]');
-    allStyleElems.forEach((elem) => {
-      elem.removeAttribute("media");
-    });
-  };
-  tempFix();
+    const tempFix = () => {
+        const elements = document.querySelectorAll('style[media="x"]');
+        elements.forEach((elem) => elem.removeAttribute('media'));
+        setTimeout(() => {
+            elements.forEach((elem) => elem.remove());
+        }, OPACITY_EXIT_DURATION * 1000);
+    };
+    tempFix();
 };
 
-Router.events.on("routeChangeComplete", routeChange );
-Router.events.on("routeChangeStart", routeChange );
+export const useTransitionFix = () => {
+    useEffect(() => {
+        Router.events.on('routeChangeComplete', routeChange);
+        Router.events.on('routeChangeStart', routeChange);
+
+        return () => {
+            Router.events.off('routeChangeComplete', routeChange);
+            Router.events.off('routeChangeStart', routeChange);
+        };
+    }, []);
+
+    useEffect(() => {
+        Router.router?.push(Router.router?.pathname);
+    }, []);
+};
 
 function MyApp({ Component, pageProps }) {
   return (
