@@ -14,7 +14,7 @@ const FourOhFour = () => {
         <h1 className={styles.title}>Error 404: Page not found</h1>
         <h2 className={styles.titlemin}>
           Denne side kender vi ikke til. <br />
-          Tryk <Link href="/">her</Link> for at komme tilbage!
+          Tryk <Link href="/" scroll={false}>her</Link> for at komme tilbage!
         </h2>
       </main>
 
