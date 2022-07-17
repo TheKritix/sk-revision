@@ -35,6 +35,7 @@ const About = () => {
             className={styles.textLink}
             href="https://fdr.dk/fdr-revisorer/sk-revision/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             {">>"} Se revisionsvirksomhedsregistrering
           </a>
