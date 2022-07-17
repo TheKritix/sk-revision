@@ -1,33 +1,43 @@
 .container {
-    width: 62vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  width: 62vw;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .main {
-    min-height: 80vh;
-    padding: 4rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: space-between;
-    justify-content: center;
-    align-items: center;
-  }
+  min-height: 80vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: space-between;
+  justify-content: center;
+  align-items: center;
+}
 
 .title {
-    font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
+  color: #262e42
 }
 
 .paragraph {
-    font-family: 'Noto Serif', serif;
-    text-align: justify;
+  font-family: "Noto Serif", serif;
+  text-align: justify;
+  color: #262e42
 }
 
 .about {
-    width: 30vw;
+  width: 30vw;
 }
 
 .image {
-    width: 18rem;
-    margin-left: 5rem;
+  width: 18rem;
+  margin-left: 5rem;
+}
+
+.textLink {
+  text-decoration: none;
+  color: rgb(0, 162, 255);
+  font-family: "Noto Serif", serif;
+  text-align: justify;
+  font-weight: bold;
 }
