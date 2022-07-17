@@ -25,7 +25,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles.image}>
-          <Image src={aboutImage} alt="SK-Revision about" placeholder="blur"/>
+          <Image src={aboutImage} alt="SK-Revision about"/>
         </div>
       </main>
     </div>
