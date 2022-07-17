@@ -1,12 +1,16 @@
-import Header from "./header/header.js";
-import Footer from './footer/footer.js'
+import styles from '../styles/Contact.module.css';
+import Head from "next/head";
 
 const Contact = () => {
   return (
-    <div>
-      <Header />
-      <h1>Contact</h1>
-      <Footer />
+    <div className={styles.container}>
+            <Head>
+        <title>Kontakt</title>
+        <link rel="icon" href="/sk-revision-simple.ico" />
+      </Head>
+      <main className={styles.main}>
+      <h1>Kontakt</h1>
+      </main>
     </div>
   );
 };

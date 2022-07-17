@@ -1,6 +1,7 @@
 import styles from "../../styles/Footer.module.css";
 import Image from "next/image";
 import LogoImage from "../../images/logo-small.png";
+import Link from "next/Link";
 
 const Footer = () => {
   return (
@@ -16,16 +17,13 @@ const Footer = () => {
           </a>
         </div>
         <div className={styles.image}>
-          <a
-            href="https://www.sk-revision.dk"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
+          <Link href="/">
+          <a>
             <span className={styles.logo}>
               <Image src={LogoImage} alt="SK-Revision Logo" />
             </span>
           </a>
+          </Link>
         </div>
         <div className={styles.cvr}>
           <a
