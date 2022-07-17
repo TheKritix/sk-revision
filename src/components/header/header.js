@@ -8,7 +8,7 @@ const Header = () => {
     <div>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <a>
               <Image src={LogoImage} alt="SK-Revision" />
             </a>
@@ -16,13 +16,13 @@ const Header = () => {
         </div>
 
         <div className={styles.nav}>
-          <Link href="/services">
+          <Link href="/services" scroll={false}>
             <a className={styles.linkbutton}>Ydelser</a>
           </Link>
-          <Link href="/about">
+          <Link href="/about" scroll={false}>
             <a className={styles.linkbutton}>Om SK-Revision</a>
           </Link>
-          <Link href="/contact">
+          <Link href="/contact" scroll={false}>
             <a className={styles.linkbutton}>Kontakt</a>
           </Link>
         </div>

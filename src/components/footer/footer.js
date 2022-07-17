@@ -17,7 +17,7 @@ const Footer = () => {
           </a>
         </div>
         <div className={styles.image}>
-          <Link href="/">
+          <Link href="/" scroll={false}>
           <a>
             <span className={styles.logo}>
               <Image src={LogoImage} alt="SK-Revision Logo" />
