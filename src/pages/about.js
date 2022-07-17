@@ -1,7 +1,7 @@
 import styles from "../styles/About.module.css";
 import Head from "next/head";
 import Image from "next/image";
-import aboutImage from "../images/wip.png";
+import aboutImage from "../images/wipImage.PNG";
 
 const About = () => {
   return (
