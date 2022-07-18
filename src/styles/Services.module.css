@@ -16,11 +16,13 @@
 
 .title {
     font-family: 'Noto Serif', serif;
+    color: #262e42
 }
 
 .paragraph {
     font-family: 'Noto Serif', serif;
     text-align: justify;
+    color: #262e42
 }
 
 .about {
