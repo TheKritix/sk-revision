@@ -14,7 +14,7 @@ const Transition = ({ children }) => {
   return (
     <div>
       <AnimatePresence
-        initial={false}
+        initial={true}
         exitBeforeEnter
         onExitComplete={() => window.scrollTo(0, 0)}
       >

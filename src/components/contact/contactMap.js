@@ -1,32 +1,26 @@
-import styles from "../../styles/ContactMap.module.css";
 import React from "react";
-import GoogleMapReact from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
+const lib = ["places"];
+const id = ["8e0a97af9386fef"];
+const key = "AIzaSyCUvWxBDGy5fk52SrJcX52ehCElbogMwW0"; // PUT GMAP API KEY HERE
+const defaultLocation = { lat: 40.756795, lng: -73.954298 };
 
-export default function ContactMap(){
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627
-    },
-    zoom: 11
-  };
-
-  return (
-    // Important! Always set the container height explicitly
-    <div style={{ height: '100vh', width: '100%' }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-        <AnyReactComponent
-          lat={59.955413}
-          lng={30.337844}
-          text="My Marker"
-        />
-      </GoogleMapReact>
-    </div>
-  );
+class Map extends React.Component {
+  render() {
+    return (
+      <div>
+        <LoadScript googleMapsApiKey={key} libraries={lib} mapIds={id}>
+          <GoogleMap
+            center={defaultLocation}
+            zoom={5}
+            options={{ mapId: "8e0a97af9386fef" }}
+            mapContainerStyle={{ height: "400px", width: "800px" }}
+          />
+        </LoadScript>
+      </div>
+    );
+  }
 }
+
+export default Map;
