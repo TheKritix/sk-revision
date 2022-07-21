@@ -57,8 +57,8 @@ const Transition = ({ children }) => {
   };
 
   const scrollToExit = () => {
-    window.scrollTo(0, 0);
     onExit();
+    window.scrollTo(0, 0);
   }
 
   const { asPath } = useRouter();
