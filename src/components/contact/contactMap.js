@@ -3,7 +3,7 @@ import React from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 const lib = ["places"];
 const id = ["8e0a97af9386fef"];
-const key = "AIzaSyCUvWxBDGy5fk52SrJcX52ehCElbogMwW0"; // PUT GMAP API KEY HERE
+const key = ""; // PUT GMAP API KEY HERE
 const defaultLocation = { lat: 40.756795, lng: -73.954298 };
 
 class Map extends React.Component {
