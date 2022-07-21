@@ -57,8 +57,7 @@ const Transition = ({ children }) => {
   };
 
   async function scrollToExit() {
-    setTimeout(1000)
-    onExit();
+    setTimeout(onExit, 500)
     window.scrollTo(0, 0);
   }
 
