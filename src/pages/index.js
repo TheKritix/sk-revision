@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 
 const Home = () => {
   return (
@@ -13,7 +11,7 @@ const Home = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Revisoren til den lille virksomhed.<br/>
+          Den lille virksomheds revisor.<br/>
           v/ Sanne Kjærgaard, Registeret Revisor
         </h1>
       </main>

@@ -1,7 +1,6 @@
 import styles from "../styles/Contact.module.css";
 import Head from "next/head";
 import ContactInfo from "../components/contact/contactInfo";
-import ContactMap from "../components/contact/contactMap";
 
 const Contact = () => {
   return (
@@ -12,8 +11,10 @@ const Contact = () => {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Tag fat i SK-Revision</h1>
-        <ContactInfo />
-        <ContactMap />
+        <div className={styles.contact}>
+          <ContactInfo />
+          <ContactInfo />
+        </div>
       </main>
     </div>
   );

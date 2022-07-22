@@ -4,9 +4,6 @@ import Footer from "../components/footer/footer.js";
 import Transition from "../components/page-ani";
 import { useRouter } from "next/router";
 
-
-
-
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (

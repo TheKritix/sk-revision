@@ -13,9 +13,10 @@ let copies = [];
 
 //https://letsbuildui.dev/articles/animated-page-transitions-in-nextjs
 //https://www.framer.com/docs/introduction/
+
 const Transition = ({ children }) => {
   
-
+  //https://github.com/vercel/next.js/discussions/18724?sort=new
   useEffect(() => {
     Router.events.on("beforeHistoryChange", onLoad);
     return () => {
@@ -32,8 +33,6 @@ const Transition = ({ children }) => {
     );
     copies = [...nodes].map((el) => el.cloneNode(true));
 
-    console.log(document.head)
-    console.log(copies)
     for (let copy of copies) {
       // Remove Next.js' data attributes so the copies are not removed from the DOM in the route
       // change process.
@@ -47,10 +46,7 @@ const Transition = ({ children }) => {
   };
 
   const onExit = () => {
-    console.log("shit");
-    console.log(copies);
     for (let copy of copies) {
-      console.log("no homo");
       // Remove previous page's styles after the transition has finalized.
       document.head.removeChild(copy);
     }
